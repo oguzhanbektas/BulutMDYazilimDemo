@@ -13,12 +13,12 @@ public class CustomerService {
 
 	@Autowired
 	CustomerRepository repo;
-	
+
 	public void save(Customer customer) {
 		repo.save(customer);
 	}
+
 	public List<Customer> getCustomers() {
 		return repo.findAll();
 	}
-
 }

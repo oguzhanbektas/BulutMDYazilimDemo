@@ -19,15 +19,9 @@ public class CustomerResource {
 	@Autowired
 	CustomerService customerService;
 
-	@RequestMapping(value="/save",method = RequestMethod.POST)
-	public String save(Customer customer) {
+	@RequestMapping(value = "/save", method = RequestMethod.POST)
+	public void save(Customer customer) {
 		customerService.save(customer);
-		return "DENEME";
-	}
-
-	@RequestMapping(method = RequestMethod.GET)
-	public String bas() {
-		return "Hello World";
 	}
 
 	@RequestMapping(value = "/getAll", method = RequestMethod.GET)
